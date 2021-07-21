@@ -1,0 +1,35 @@
+{% extends 'basicbank/index.html' %}
+{% load static %}
+
+{% block content %}
+<title>Transfer Details</title>
+<br>
+<h1 style="color:rgb(24, 194, 206);font-family: 'Playfair Display', serif;font-size: 40px;text-align:center;">TRANSACTION DETAILES ONLY</h1>
+<br>
+<br>
+<table class="teble-bordered table-striped table-info table-hover">
+<thead class="table-dark"> 
+<tr>
+<th>SR NO</th>
+<th>SENDER</th>
+<th>RECIVER</th>
+<th>TRANSFER Amt</th>
+<th>DATE OF TRANSEFER</th>
+</tr>
+</thead>
+<tbody>
+{% for t in tr %}
+<tr>
+<td>{{t.id}}</td>
+<td>{{t.sender}}</td>
+<td>{{t.reciever}}</td>
+<td>{{t.amount}}</td>
+<td>{{t.date_tran}}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<br>
+<br>
+<p style="padding:10px 10px; display:block; color:rgb(28, 7, 122); text-align:center;" class="bg-white sticky-bottom fixed-bottom">ADI DJANGO BANK © All right Reversed.</p>
+{% endblock content %}
